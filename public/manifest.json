@@ -1,6 +1,7 @@
 {
   "short_name": "TLC Golf",
   "name": "TLC Golf",
+  "permissions": "[clipboardWrite]",
   "icons": [
     {
       "src": "favicon.ico",
@@ -22,7 +23,8 @@
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
-    }],
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

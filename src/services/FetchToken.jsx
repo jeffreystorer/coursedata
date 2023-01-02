@@ -11,7 +11,11 @@ export default function FetchToken(props) {
   const [dataReader] = useAsyncResource(fetchData, []);
 
   function TokenData({ dataReader, next }) {
-    dataReader((data) => set('token', data.data.golfer_user.golfer_user_token)); // 😎 just call the data reader function to get the user object
+    dataReader((data) => {
+      const token = data.data.golfer_user.golfer_user_token;
+      set('token', token);
+      navigator.clipboard.writeText(token);
+    }); // 😎 just call the data reader function to get the user object
     return next;
   }
 
