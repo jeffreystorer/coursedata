@@ -15,21 +15,3 @@ export const teeValues = [
   'ISL/SK',
   'SK',
 ];
-
-export const teeArray = [
-  { value: 'CH', label: 'Championship' },
-  { value: 'T', label: 'Tournament' },
-  { value: 'T/C', label: 'Tournament/Club' },
-  { value: 'C', label: 'Club' },
-  { value: 'C/M', label: 'Club/Medal' },
-  { value: 'M', label: 'Medal' },
-  { value: 'M/CRS', label: 'Medal/Course' },
-  { value: 'CRS', label: 'Course' },
-  { value: 'SCRS', label: 'Short Course' },
-  { value: 'CRS/ISL', label: 'Course/Island' },
-  { value: 'SCRS/ISL', label: 'Short/Island' },
-  { value: 'ISL', label: 'Island' },
-  { value: 'SK/CRS', label: 'Skidaway/Course' },
-  { value: 'ISL/SK', label: 'Island/Skidaway' },
-  { value: 'SK', label: 'Skidaway' },
-];

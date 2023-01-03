@@ -60,7 +60,7 @@ export default function setUniqueTeeArray(courseData) {
   set('newItems', newItems);
 
   const clonedTeeValues = JSON.parse(JSON.stringify(teeValues));
-  ///clonedTeeValues.push('OMT1', 'OMT2');
+  //clonedTeeValues.push('OMT1', 'OMT2');
   let omittedItems = [];
   clonedTeeValues.forEach(compareOmitted);
   function compareOmitted(item) {

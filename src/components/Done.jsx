@@ -35,6 +35,14 @@ export default function Done() {
   }
   return (
     <>
+      <br />
+      {newItems.length > 0 && <h3>New Tees added to GHIN Data</h3>}
+      {newItems.length > 0 &&
+        newItems.map((item, index) => <p key={index}>{item}</p>)}
+      {omittedItems.length > 0 && <h3>Old Tees omitted from GHIN Data</h3>}
+      {omittedItems.length > 0 &&
+        omittedItems.map((item, index) => <p key={index}>{item}</p>)}
+      <br />
       <table>
         <thead>
           <tr>
@@ -62,12 +70,6 @@ export default function Done() {
         </tbody>
       </table>
       <br />
-      {newItems.length > 0 && <h3>New Tees added to GHIN Data</h3>}
-      {newItems.length > 0 &&
-        newItems.map((item, index) => <p key={index}>{item}</p>)}
-      {omittedItems.length > 0 && <h3>Old Tees omitted from GHIN Data</h3>}
-      {omittedItems.length > 0 &&
-        omittedItems.map((item, index) => <p key={index}>{item}</p>)}
       <table>
         <thead>
           <tr>

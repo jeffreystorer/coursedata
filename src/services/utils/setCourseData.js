@@ -1,5 +1,4 @@
 import { setUniqueTeeArray } from '@/services/utils';
-import { set } from '@/utils/localStorage';
 
 export default function setCourseData(values) {
   let mTeeLabels = [];
@@ -37,6 +36,5 @@ export default function setCourseData(values) {
   const slopes = [mSlopes, wSlopes];
   const pars = [mPars, wPars];
   const courseData = [teeLabels, teeValues, ratings, slopes, pars];
-  set('courseData', courseData);
   setUniqueTeeArray(courseData);
 }
