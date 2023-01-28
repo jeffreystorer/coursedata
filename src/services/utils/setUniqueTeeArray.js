@@ -69,6 +69,7 @@ export default function setUniqueTeeArray(courseData) {
     if (!found) omittedItems.push(aTeeValue);
   }
   set('omittedItems', omittedItems);
+  console.log('😊😊 finalArray', finalArray);
 
   set('uniqueTeeArray', finalArray);
 }

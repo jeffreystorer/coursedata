@@ -11,7 +11,6 @@ export const teeValues = [
   'CRS/ISL',
   'SCRS/ISL',
   'ISL',
-  'SK/CRS',
   'ISL/SK',
   'SK',
 ];
