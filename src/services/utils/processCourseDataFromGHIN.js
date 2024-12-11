@@ -16,8 +16,6 @@ export default function processCourseDataFromGHIN(data) {
     Tournament: 'T',
     Club: 'C',
     Medal: 'M',
-    'Course Short': 'SCRS',
-    'Short Course': 'SCRS',
     Short: 'SCRS',
     Course: 'CRS',
     Island: 'ISL',
@@ -57,8 +55,9 @@ export default function processCourseDataFromGHIN(data) {
             return courseReplacements[matched];
           }
         );
-        let tee = newTeeName.replace(
-          /Championship|Tournament|Club|Medal|Short Course|Course Short|Short|Course|Island|Skidaway/gi,
+        let editedNewTeeName = newTeeName.replace('Course Island / Combo', 'Course/Island')
+        let tee = editedNewTeeName.replace(
+          /Championship|Tournament|Club|Medal|Course|Island|Skidaway/gi,
           function (matched) {
             return teeReplacements[matched];
           }
@@ -77,7 +76,7 @@ export default function processCourseDataFromGHIN(data) {
           tee,
           ratingType,
           ratingValue,
-          newTeeName
+          editedNewTeeName
         );
         slopeArray.push(
           mF,
@@ -87,7 +86,7 @@ export default function processCourseDataFromGHIN(data) {
           tee,
           slopeType,
           slopeValue,
-          newTeeName
+          editedNewTeeName
         );
         parArray.push(
           mF,
@@ -97,7 +96,7 @@ export default function processCourseDataFromGHIN(data) {
           tee,
           parType,
           parValue,
-          newTeeName
+          editedNewTeeName
         );
         courseData.push(ratingArray, slopeArray, parArray);
       }
